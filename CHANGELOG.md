@@ -1,3 +1,6 @@
+## v4.0.4
+- Updated to Unity 6.2 which claims to have fixed the frequent physics crashes on iOS.
+
 ## v4.0
 
 - Save recordings of your favourite simulation results in the new gallery.
