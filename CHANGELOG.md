@@ -1,3 +1,6 @@
+## v4.0.5
+- Updated to Unity 6.2.6f2 to address security vulnerability in older versions of Unity.
+
 ## v4.0.4
 - Updated to Unity 6.2 which claims to have fixed the frequent physics crashes on iOS.
 
