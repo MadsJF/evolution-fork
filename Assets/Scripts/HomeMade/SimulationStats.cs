@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Keiwando.Evolution;
+
 
 public class SimulationStats : MonoBehaviour
 {
@@ -16,12 +18,18 @@ public class SimulationStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float newTimeScale = timeScaleSlider.value;
+        if (Time.timeScale != newTimeScale) {
+            Time.timeScale = newTimeScale;
+            timeScaleText.text = "TIMESCALE: " + newTimeScale.ToString("F1") + "X";
+        }
+        float averageSpeed = 0;
+        float horizontalDistance = 0;
+        float verticalDistance = 0; 
+        statsText.text = "AVERAGE SPEED:"+averageSpeed+"+ m/s\n" +
+            "HORIZ. DISTANCE FROM START: "+horizontalDistance + " m\n" +
+            "VERT. DISTANCE FROM START: "+verticalDistance+" m\n";
         
     }
 
-    public void onTimeChange() {
-        float newTimeScale = timeScaleSlider.value;
-        Time.timeScale = newTimeScale;
-        timeScaleText.text = "TIMESCALE: " + newTimeScale.ToString("F1") + "X";
-    }
 }
