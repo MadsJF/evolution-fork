@@ -63,5 +63,12 @@ namespace Keiwando.Evolution {
 					batch[i].SetOnInvisibleLayer();
 			}
 		}
-	}
+
+        public Creature GetFocusedCreature() {
+            var batch = evolution.CurrentCreatureBatch;
+            if (batch == null || batch.Length == 0) return null;
+            if (watchingIndex >= batch.Length) return null;
+            return batch[watchingIndex];
+        }
+    }
 }
